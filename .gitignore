@@ -1,0 +1,6 @@
+*.exe
+*.dll
+out/
+gentime
+initial/
+backup/
