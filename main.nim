@@ -76,9 +76,6 @@ proc generate(params: Params) =
     if page.kind in {pkMarkdown, pkRst}:
       echo "Parsing page: ", name
       page.loadHypertext(path)
-      if name == "index.md":
-        writeFile("indexMeta.txt", page.meta)
-        writeFile("indexBody.txt", page.body)
       echo "Generating file: ", name
       let lenBack = if page.kind == pkMarkdown: 3 else: 4
       name.setLen(name.len - lenBack)
